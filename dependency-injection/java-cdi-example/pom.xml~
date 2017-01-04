@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bluecode</groupId>
+  <artifactId>java-cdi-weld</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  <developers>
+  	<developer>
+  		<name>Julio Cesar Bolaños Palacios</name>
+  		<email>cesar.dev.code@gmail.com</email>
+	</developer>
+  </developers>
+  
+  <properties>
+  	<weld.cdi.version>2.4.1.Final</weld.cdi.version>
+  	<junit.version>4.12</junit.version>
+  	<cdi.unit.version>3.1.4</cdi.unit.version>
+  </properties>
+  
+  <dependencies>
+  
+  	<!-- CDI Dependency -->
+	<dependency>
+	   	<groupId>javax.enterprise</groupId>
+	   <artifactId>cdi-api</artifactId>
+	   <version>1.2</version>
+	</dependency>
+	
+	<!-- JUnit Test -->
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>${junit.version}</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<!-- CDI Unit test -->
+	<dependency>
+	    <groupId>org.jglue.cdi-unit</groupId>
+	    <artifactId>cdi-unit</artifactId>
+	    <version>${cdi.unit.version}</version>
+	    <scope>test</scope>
+	</dependency>
+	
+		  	
+  </dependencies>
+  
+</project>

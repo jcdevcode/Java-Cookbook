@@ -1,0 +1,25 @@
+- ¿Que es Maven?
+	+ Herramienta para administrar el ciclo de vida de un proyecto de software.
+	+ Administrar: Gestionar el ciclo de vida de un proyecto en algun lenguaje.
+	+ Creado a partir de la necesidad de facilitar los procesos de compilación y generación de artefactos.
+	+ Maven se creo para complementar ANT, la cual es una herramienta de compilación para java.
+
+- ¿Ciclo de vida de ún proyecto con maven.?	
+    1. compile: Genera los ficheros .class compilando los fuentes .java
+    2. test: Ejecuta los test automáticos de JUnit existentes, abortando el proceso si alguno de ellos falla.
+    3. package: Genera el fichero .jar con los .class compilados
+    4. install: Copia el fichero .jar a un directorio de nuestro ordenador donde maven deja todos los .jar. De esta forma esos .jar pueden utilizarse en otros proyectos maven en el mismo ordenador.
+    5. deploy: Copia el fichero .jar a un servidor remoto, poniéndolo disponible para cualquier proyecto maven con acceso a ese servidor remoto.
+
+    Cuando se ejecuta cualquiera de los comandos maven, por ejemplo, si ejecutamos mvn install, maven irá verificando todas las fases del ciclo de vida desde la primera hasta la del comando, ejecutando solo aquellas que no se hayan ejecutado previamente.
+
+- ¿Otros pasos que estan fuera del ciclo de vida de maven?
+	Existen algunas pasos o goals que están fuera del ciclo de vida que pueden ser llamadas, pero Maven asume que estos goals no son parte del ciclo de vida por defecto (no tienen que ser siempre realizadas). 
+    1. clean: Elimina todos los .class y .jar generados. Después de este comando se puede comenzar un compilado desde cero.
+    2. assembly: Genera un fichero .zip con todo lo necesario para instalar nuestro programa java. Se debe configurar previamente en un fichero xml qué se debe incluir en ese zip.
+    3. site: Genera un sitio web con la información de nuestro proyecto. Dicha información debe escribirse en el fichero pom.xml y ficheros .apt separados.
+    4. site-deploy: Sube el sitio web al servidor que hayamos configurado.
+
+- ¿Como construir proyectos con maven?
+	1. Proyecto standalone con java: mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart
+	Lo anterior se puede usar con los parámetros: -DgroupId="com.some.company" -DartifactId="some-project" -Dversion="0.0.1"
